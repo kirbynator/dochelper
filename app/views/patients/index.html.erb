@@ -1,0 +1,19 @@
+
+
+<h1>Hello <%= current_user.patients.name %></h1>
+
+<h3>Here is a list of your appointment for today</h3>
+
+<table class="ui striped inverted table">
+  <tbody class="center aligned">
+<% Patient.each do |song| %>
+<tr>
+        <td class="right aligned">
+<h2><%= song.name %></h2>
+</td><td>
+</td>
+</tr>
+<% end%>
+</tbody>
+</table>
+

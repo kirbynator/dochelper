@@ -1,0 +1,15 @@
+
+<h1>Welcome Dr. <%= current_user.last_name %></h1>
+<%=  %>
+<% @namer = "#{current_user.first_name} #{current_user.last_name}" %>
+<% @addminn = false %>
+<%= form_for @physician do |f| %>
+    <div>
+    <%= f.hidden_field :name, value: @namer %>
+    </div>
+       <div>
+    <%= f.hidden_field :admin, value: @addminn %>
+    </div>
+    <%= f.submit %>
+
+<% end %>
